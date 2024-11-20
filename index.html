@@ -1,0 +1,130 @@
+<!DOCTYPE html>  
+<html lang="ko">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Tailwind CSS 학습이나 간단한 테스트를 위해서는 CDN 방식 -->   
+    <title>나의 첫 웹페이지</title>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <!--   
+        모던한 디자인 개선사항:  
+        - Tailwind CSS를 활용한 반응형 디자인  
+        - 부드러운 그림자 효과와 둥근 모서리  
+        - 깔끔한 여백과 정렬  
+    -->  
+    <style>  
+        /*   
+            타이포그래피 개선사항:  
+            - Noto Sans KR 폰트 적용  
+            - 적절한 글자 크기와 간격  
+        */  
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');  
+        
+        body {  
+            font-family: 'Noto Sans KR', sans-serif;  
+            background-color: #f8f9fa;  
+        }  
+
+        /*   
+            상호작용 요소 개선사항:  
+            - 링크에 호버 효과 추가  
+            - 단락에 호버 시 배경색 변화  
+            - 이미지 호버 시 약간 확대되는 효과  
+        */  
+        .link-hover {  
+            transition: all 0.3s ease;  
+        }  
+
+        .link-hover:hover {  
+            transform: translateY(-2px);  
+            color: #007bff;  
+        }  
+
+        .image-container {  
+            transition: all 0.3s ease;  
+        }  
+
+        .image-container:hover {  
+            transform: scale(1.02);  
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+        }  
+    </style>  
+</head>  
+<body class="min-h-screen">  
+    <div class="container mx-auto px-4 py-8">  
+        <!--   
+            구조화 개선사항:  
+            - 콘텐츠를 섹션별로 구분  
+            - 카드 형태의 디자인으로 정보 구분  
+        -->  
+        
+        <!-- 헤더 섹션 -->  
+        <header class="text-center mb-12">  
+            <h1 class="text-4xl font-bold text-blue-600 mb-4 animate-fade-in">  
+                나의 첫번째 웹 페이지  
+            </h1>  
+            <h4 class="text-xl text-gray-600 font-medium">  
+                HTML의 기본 내용을 실습해 봅니다.  
+            </h4>  
+        </header>  
+
+        <!--   
+            색상 개선사항:  
+            - 부드러운 색상 팔레트 사용  
+            - 기존의 검은 배경은 유지하되 더 세련되게 개선  
+        -->  
+        
+        <!-- 단락 섹션 1 -->  
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">  
+            <div class="space-y-4">  
+                <p class="bg-gray-900 text-white p-4 rounded-md transition-all hover:bg-gray-800">단락1</p>  
+                <p class="bg-gray-900 text-white p-4 rounded-md transition-all hover:bg-gray-800">단락2</p>  
+                <p class="bg-gray-900 text-red-600 p-4 rounded-md transition-all hover:bg-gray-800">단락3</p>  
+            </div>  
+        </div>  
+
+        <!-- 단락 섹션 2 -->  
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">  
+            <div class="space-y-4">  
+                <p class="bg-gray-900 text-white p-4 rounded-md transition-all hover:bg-gray-800">단락1</p>  
+                <p class="bg-gray-900 text-white p-4 rounded-md transition-all hover:bg-gray-800">단락2</p>  
+                <p class="bg-gray-900 text-red-600 p-4 rounded-md transition-all hover:bg-gray-800">단락3</p>  
+            </div>  
+        </div>  
+
+        <!--   
+            상호작용 요소가 적용된 링크 섹션:  
+            - 호버 효과  
+            - 아이콘 추가  
+            - 부드러운 전환 효과  
+        -->  
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">  
+            <div class="flex flex-col space-y-4">  
+                <a href="https://www.naver.com/" class="link-hover text-lg text-gray-700 flex items-center">  
+                    <span class="mr-2">🔗</span> Naver  
+                </a>  
+                <a href="https://www.google.com/" class="link-hover text-lg text-gray-700 flex items-center">  
+                    <span class="mr-2">🔗</span> Google  
+                </a>  
+                <a href="https://openai.com/chatgpt/" target="_blank" class="link-hover text-lg text-gray-700 flex items-center">  
+                    <span class="mr-2">🔗</span> ChatGPT  
+                </a>  
+            </div>  
+        </div>  
+
+        <!--   
+            이미지 섹션 개선사항:  
+            - 반응형 이미지 크기  
+            - 호버 효과  
+            - 그림자 효과  
+        -->  
+        <div class="bg-white rounded-lg shadow-lg p-6">  
+            <div class="image-container">  
+                <img src="img01.jpg" alt="test" class="w-full max-w-md mx-auto rounded-lg shadow-md mb-4">  
+                <p class="text-center text-gray-600 mb-4">사진: charlesdeluvio</p>  
+                <p class="bg-gray-900 text-white p-4 rounded-md text-center">이미지의 p태그</p>  
+            </div>  
+        </div>  
+    </div>  
+</body>  
+</html>  
